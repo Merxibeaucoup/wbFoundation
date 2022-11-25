@@ -6,6 +6,10 @@
   padding-right: 1.5rem;
 }
 
+.animation {
+  transition: all 0.8s ease-out;
+}
+
 .p-15 {
   padding: 1.5rem;
 }
@@ -36,14 +40,32 @@
   transition: all 0.3s;
 }
 
+.btn--circle {
+  height: 70px;
+  line-height: 70px;
+  width: 70px;
+  font-size: small;
+  font-weight: bold;
+  border-radius: 50%;
+  background: linear-gradient(to right, #ff512f, #dd2476);
+  color: #fdf2e9;
+  cursor: pointer;
+
+  &:hover {
+    background: #fff;
+    color: #555;
+  }
+}
+
 .btn--form {
   background: linear-gradient(to right, #ff512f, #dd2476);
   color: #fdf2e9;
   align-self: end;
   padding: 1.2rem;
+  transition: 0.4s linear;
 
   &:hover {
-    background-color: #fff;
+    background: #fff;
     color: #555;
   }
 }
