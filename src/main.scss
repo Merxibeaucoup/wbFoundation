@@ -1,0 +1,13 @@
+@import "sass/base/base";
+
+@import "sass/utils/utils";
+
+@import "sass/abstracts/mixins.scss";
+
+// components
+@import "sass/components/header";
+@import "sass/components/goals";
+@import "sass/components/cta";
+@import "sass/components/footer";
+
+@import "sass/layout/layout";

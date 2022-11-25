@@ -1,0 +1,49 @@
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.p-15 {
+  padding: 1.5rem;
+}
+.pl-15 {
+  padding-left: 1.5rem;
+}
+
+.mr-minus-15 {
+  margin-right: -1.5rem;
+}
+
+.ml-minus-15 {
+  margin-left: -1.5rem;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1.6rem 3.2rem;
+  border-radius: 9px;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.3s;
+}
+
+.btn--form {
+  background: linear-gradient(to right, #ff512f, #dd2476);
+  color: #fdf2e9;
+  align-self: end;
+  padding: 1.2rem;
+
+  &:hover {
+    background-color: #fff;
+    color: #555;
+  }
+}

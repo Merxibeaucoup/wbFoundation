@@ -1,0 +1,68 @@
+.goals {
+  margin: 5rem 0;
+
+  &__heading {
+    font-size: 2.8rem;
+    color: #000;
+    font-weight: 500;
+    width: 60%;
+    line-height: 4rem;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: -0.5rem;
+      left: 0;
+      width: 30%;
+      height: 0.2rem;
+      background: linear-gradient(to right, #ff512f, #dd2476);
+    }
+  }
+
+  &__paragraph {
+    font-size: 1.6rem;
+    line-height: 2.7rem;
+    color: rgb(192, 188, 188);
+    font-weight: 400;
+  }
+
+  &__list {
+    padding: 2rem 0;
+
+    &__texts {
+      &-number {
+        font-size: 8.6rem;
+        font-weight: 600;
+        color: #ddd;
+        margin-bottom: 1.2rem;
+      }
+
+      &-heading {
+        font-size: 3rem;
+        line-height: 1.2;
+        margin-bottom: 3.2rem;
+        font-weight: 700;
+        color: #333;
+        letter-spacing: -0.5px;
+      }
+
+      &-paragraph {
+        font-size: 1.8rem;
+        line-height: 1.8;
+        color: rgb(163, 163, 163);
+        font-weight: 400;
+      }
+    }
+
+    &__img {
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
