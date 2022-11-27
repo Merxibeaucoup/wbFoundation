@@ -1,0 +1,67 @@
+.support {
+  text-align: center;
+  &__title {
+    color: #ef476f;
+    padding-top: 5%;
+    font-weight: 700;
+    font-size: 5rem;
+  }
+  &__desc {
+    font-size: 1.8rem;
+    padding-top: 5%;
+    color: #073b4c;
+    letter-spacing: 0.2rem;
+    line-height: 3rem;
+  }
+
+  &__boxContainer {
+    margin: 8%;
+    display: flex;
+    height: 40%;
+  }
+  &__box-1 {
+    flex: 1;
+    width: 30%;
+    height: auto;
+    background-image: linear-gradient(to bottom right, #000000bc, #c5c3c363),
+      url("/public/assets/support/dove.jpg");
+    background-size: cover;
+    margin-right: 5%;
+    margin-left: 5%;
+    border-radius: 2%;
+    color: white;
+    padding-bottom: 3rem;
+    position: relative;
+  }
+
+  &__box-2 {
+    flex: 1;
+    width: 30%;
+    background-image: linear-gradient(to bottom right, #000000bc, #c5c3c363),
+      url("/public/assets/support/hope.jpg");
+    background-size: cover;
+    margin-right: 5%;
+    margin-left: 5%;
+    border-radius: 2%;
+    color: white;
+    padding-bottom: 3rem;
+    position: relative;
+  }
+
+  &__boxTitle {
+    color: white;
+    font-size: 3rem;
+    padding: 5%;
+    text-align: left;
+    letter-spacing: 0.2rem;
+    line-height: 3.5rem;
+  }
+
+  &__boxDesc {
+    font-size: 1.8rem;
+    padding: 5%;
+    color: white;
+    letter-spacing: 0.2rem;
+    line-height: 3rem;
+  }
+}
