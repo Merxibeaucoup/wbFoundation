@@ -1,0 +1,46 @@
+.navbar {
+  background-color: transparent;
+  position: absolute;
+  top: 2;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  padding: 6rem 10rem 0 0;
+  z-index: 9999;
+
+  &__items {
+    display: flex;
+    gap: 2rem;
+
+    &-about {
+      color: #fff;
+      padding: 1rem 2rem;
+      background: #ef476f;
+      border-radius: 9px;
+      border: none;
+      cursor: pointer;
+      font-weight: 700;
+      transition: 0.4s linear;
+      &:hover {
+        background: #fff;
+        color: #555;
+      }
+    }
+
+    &-donate {
+      color: #073b4c;
+      padding: 1rem 2rem;
+      background: linear-gradient(to bottom right, #06d6a0, #ffd166);
+      border-radius: 9px;
+      border: none;
+      cursor: pointer;
+      font-weight: 700;
+      transition: 0.4s linear;
+      &:hover {
+        background: #fff;
+        color: #555;
+      }
+    }
+  }
+}

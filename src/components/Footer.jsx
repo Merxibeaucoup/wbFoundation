@@ -61,6 +61,9 @@ const Footer = () => {
                       </li>
                     </ul>
                   </div>
+                  <div className="footer__builder">
+                    Website Designed and Created by Edgar Briandt
+                  </div>
                 </div>
               </div>
             </div>

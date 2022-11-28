@@ -51,7 +51,7 @@ const GoalsList = () => {
           </div>
         </div>
         {/* third */}
-        <div className="row mr-minus-15">
+        {/* <div className="row mr-minus-15">
           <div className="col-6 p-15">
             <div className="goals__list__texts">
               <p className="goals__list__texts-number">03</p>
@@ -78,7 +78,7 @@ const GoalsList = () => {
               />
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
