@@ -23,7 +23,7 @@ const Support = () => {
               Your generous support drives our mission and enables us to make an
               impact in our community. You are vital to the work that we do.
             </p>
-            <button className="support__button">Donate</button>
+            <button className="btn btn--form">Donate</button>
           </div>
           <div className="support__box-2">
             <h3 className="support__boxTitle">Sponsor WBFoundation</h3>
@@ -31,7 +31,7 @@ const Support = () => {
               Becoming a WBFoundation Team sponsor is a smart and strategic way
               to build brand awareness and strengthen your consumer loyalty
             </p>
-            <button className="support__button">Sponsor</button>
+            <button className="btn btn--form">Sponsor</button>
           </div>
         </div>
       </div>

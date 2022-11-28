@@ -1,0 +1,67 @@
+.hope {
+  height: 80vh;
+  background: linear-gradient(to bottom right, #844545e1, #938f8fbc);
+  text-align: center;
+
+  &__title {
+    color: #ffd166;
+    font-size: 3.5rem;
+    font-weight: 700;
+    padding-top: 5%;
+    margin-left: 35%;
+    margin-right: 35%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__desc {
+    color: white;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin-top: 2%;
+  }
+
+  &__letterContainer {
+    display: flex;
+    margin-top: 5%;
+
+    &__letter {
+      flex: 1;
+      font-size: 10rem;
+      font-weight: 700;
+      transition: all 0.65s ease;
+      color: #073b4c;
+      &:hover {
+        background-color: #ef476f;
+        height: 100%;
+        transform: scale(1);
+      }
+    }
+    &__letterDesc {
+      color: white;
+      font-size: 3rem;
+      font-weight: light;
+    }
+  }
+
+  &__msgContainer {
+    height: 12%;
+    width: 60%;
+    background-color: white;
+    margin-top: 3%;
+    margin-left: 20%;
+    border-radius: 0.5rem;
+    border-bottom-style: solid;
+    border-bottom-color: #dd2477d1;
+
+    &__message {
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      padding-top: 2%;
+      font-size: 1.8rem;
+      color: #073b4c;
+    }
+  }
+}

@@ -25,7 +25,7 @@ const ContactForm = () => {
               adipisci?
             </p>
 
-            <form class="cta-form" name="sign-up" netlify>
+            <form class="cta-form" name="contact-us" netlify>
               <div>
                 <label for="full-name">Full Name</label>
                 <input
