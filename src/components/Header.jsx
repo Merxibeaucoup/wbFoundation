@@ -5,6 +5,7 @@ const Header = () => {
   const [state] = useState({
     image: "assets/header/he1.jpg",
     logo: "assets/logo/wb-5.png",
+    title: "",
   });
 
   return (
@@ -13,6 +14,9 @@ const Header = () => {
         <div className="header__logo">
           <LazyLoadImage src={state.logo} alt="logo" />
         </div>
+        <h3 className="header__title">
+          Lets make a difference together <br /> for a cause that matters!
+        </h3>
 
         {/* <div className="header__pay">
           <button className=" btn--circle">Donate</button>

@@ -14,11 +14,20 @@
       cursor: pointer;
     }
   }
-  &__pay {
-    @include position(absolute, 5rem, null, null, 8rem, null, null);
-    z-index: 100;
+  &__title {
+    display: flex;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    text-align: center;
+    z-index: 99;
+    color: aliceblue;
+    font-size: 6rem;
+    font-weight: 400;
+    top: 40%;
+    left: 20%;
   }
-
   &__img {
     img {
       width: 100%;
