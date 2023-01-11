@@ -1,22 +1,17 @@
 .navbar {
-  background-color: transparent;
   position: absolute;
-  top: 2;
-  left: 0;
   right: 0;
-  display: flex;
-  justify-content: flex-end;
-  padding: 0rem 5.5rem 0 0;
-  z-index: 9999;
+  z-index: 9;
+
+  &__container {
+    padding: 0 5.5rem;
+  }
 
   &__items {
-    display: flex;
-    justify-content: flex-end;
-
     &-donate {
       color: #073b4c;
       padding: 1.5rem 3rem;
-      background-color: rgba(244, 244, 61, 0.908);
+      background-color: #eaee44;
       border: none;
       cursor: pointer;
       font-weight: 700;
