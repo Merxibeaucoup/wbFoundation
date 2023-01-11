@@ -14,13 +14,7 @@ const Header = () => {
         <div className="header__logo">
           <LazyLoadImage src={state.logo} alt="logo" />
         </div>
-        <h3 className="header__title">
-          Lets make a difference together <br /> for a cause that matters!
-        </h3>
 
-        {/* <div className="header__pay">
-          <button className=" btn--circle">Donate</button>
-        </div> */}
         <div className="header__img">
           <LazyLoadImage src={state.image} alt="image" />
         </div>

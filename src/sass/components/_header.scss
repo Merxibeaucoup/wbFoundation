@@ -1,11 +1,11 @@
 .header {
   width: 100%;
-
   position: relative;
+
   clip-path: polygon(50% 0, 100% 0, 100% 86%, 0% 100%, 0% 60%, 0 0);
 
   &__logo {
-    @include position(absolute, 0.8rem, 5rem, null, null, null, null);
+    @include position(absolute, -1rem, 3rem, null, null, null, null);
     z-index: 99;
     img {
       width: 18rem;
