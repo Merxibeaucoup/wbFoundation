@@ -1,14 +1,11 @@
 .navbar {
-  position: absolute;
   position: fixed;
-  right: 0;
+  width: 100%;
   z-index: 9;
 
-  &__container {
-    padding: 0 5.5rem;
-  }
-
   &__items {
+    display: flex;
+    flex-direction: row-reverse;
     &-donate {
       position: sticky;
       color: #073b4c;
