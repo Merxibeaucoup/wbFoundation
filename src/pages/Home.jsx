@@ -15,7 +15,7 @@ const Home = () => {
       <Header />
       <Goals />
       <GoalsList />
-      <Hope />
+      {/* <Hope /> */}
       <Support />
       <ContactForm />
       <Footer />

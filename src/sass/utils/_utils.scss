@@ -6,6 +6,11 @@
   padding-right: 1.5rem;
 }
 
+.box {
+  padding: 4rem 8rem;
+  text-align: center;
+}
+
 .animation {
   transition: all 0.8s ease-out;
 }
@@ -28,26 +33,22 @@
 .btn,
 .btn:link,
 .btn:visited {
+  margin-top: 3rem;
   display: inline-block;
   text-decoration: none;
-  font-size: 2rem;
+  color: #073b4c;
+  font-size: 1.6rem;
   font-weight: 600;
-  padding: 1rem 2rem;
-  border-radius: 9px;
+  padding: 1rem 3rem;
+  border-radius: 9999rem;
   border: none;
   cursor: pointer;
   font-family: inherit;
   transition: all 0.3s;
-}
 
-.btn--form {
-  background: linear-gradient(to right, #ff512f, #dd2476);
-  color: #fff;
-  align-self: end;
-  transition: 0.4s linear;
-
-  &:hover {
-    background: #fff;
-    color: #555;
+  &:hover,
+  &:active {
+    background: #eaee44;
+    color: #073b4c;
   }
 }
