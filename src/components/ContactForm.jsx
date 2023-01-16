@@ -53,8 +53,8 @@ const ContactForm = () => {
                 <select id="select-where" name="select-where" required>
                   <option value="">Please choose one option:</option>
                   <option value="friends">Friends and family</option>
-                  <option value="podcast">Podcast</option>
-                  <option value="ad">Facebook ad</option>
+                  <option value="podcast">Instagram</option>
+                  <option value="ad">Facebook </option>
                   <option value="others">Others</option>
                 </select>
               </div>

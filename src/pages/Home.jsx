@@ -1,5 +1,6 @@
 import React from "react";
 import ContactForm from "../components/ContactForm";
+import Events from "../components/Events";
 import Footer from "../components/Footer";
 import Goals from "../components/Goals";
 import GoalsList from "../components/GoalsList";
@@ -17,6 +18,7 @@ const Home = () => {
       <GoalsList />
       {/* <Hope /> */}
       <Support />
+      <Events />
       <ContactForm />
       <Footer />
     </>
