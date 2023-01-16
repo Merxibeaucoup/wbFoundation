@@ -1,4 +1,4 @@
-const Events = [
+export const eventsData = [
   {
     id: 1,
     image: "/assets/support/coins.jpg",
@@ -24,5 +24,3 @@ const Events = [
     location: "Accra",
   },
 ];
-
-export default Events;
