@@ -18,6 +18,7 @@ function Checkout() {
     const headers = {
       "Content-Type": "application/json",
     };
+    setNumber("");
 
     return fetch(`http://localhost:8282/checkout`, {
       method: "POST",

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [state] = useState({
@@ -13,9 +14,11 @@ const Header = () => {
   return (
     <div className="header">
       <div className="container">
-        <div className="header__logo">
-          <LazyLoadImage src={state.logo} alt="logo" />
-        </div>
+        <Link to="/">
+          <div className="header__logo">
+            <LazyLoadImage src={state.logo} alt="logo" />
+          </div>
+        </Link>
 
         <div className="header__img">
           <LazyLoadImage src={state.image} alt="image" />
