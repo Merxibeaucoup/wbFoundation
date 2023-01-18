@@ -9,7 +9,7 @@ const Support = ({ item }) => {
         </h3>
         <p className="support__desc">
           By Supporting WBfoudation, you are supporting unfortanate individuals
-          in <br /> Ghana, west Africa. <br />
+          in Ghana, west Africa. <br />
           What started as an annual food drive 4 years ago has <br /> blossomed
           into a community centered organization focused on providing <br />{" "}
           quality life for unfortunate individuals.

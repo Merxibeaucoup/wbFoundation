@@ -42,7 +42,11 @@ const GoalsList = () => {
           </div>
           <div className="goals__boxes-box4 box">
             <h3 className="goals__boxes-title">Volunteer</h3>
-            <form action="" class="goals__boxes__volunteer-form">
+            <form
+              action="https://formsubmit.co/9e4bbbfb6393d0fbbcf1ac400b1a3ece"
+              method="POST"
+              class="goals__boxes__volunteer-form"
+            >
               <input
                 id="volunteer-email"
                 type="text"
@@ -51,7 +55,9 @@ const GoalsList = () => {
                 required
               />
             </form>
-            <button className="goals__boxes-support btn">Volunteer</button>
+            <button type="submit" className="goals__boxes-support btn">
+              Volunteer
+            </button>
           </div>
         </div>
       </div>

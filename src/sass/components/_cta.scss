@@ -9,18 +9,26 @@
 
   background-image: linear-gradient(to right bottom, #850101, #606163);
   overflow: hidden;
-  transform: skewY(5deg);
+  // transform: skewY(5deg);
 
-  &__layer {
-    margin: 2rem 0;
-    background: #fcfbfb;
-    padding: 13rem 0;
-    transform: skewY(-5deg);
+  @media only screen and (max-width: $bp-small) {
+    grid-template-columns: 1fr;
   }
+
+  // &__layer {
+  //   margin: 2rem 0;
+  //   background: #fcfbfb;
+  //   padding: 13rem 0;
+  //   transform: skewY(-5deg);
+  // }
 
   &-text-box {
     padding: 4.8rem 6.4rem 6.4rem 6.4rem;
     color: #e9e8e8;
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 3.2rem;
+    }
   }
 
   & .heading-secondary {
@@ -44,6 +52,11 @@
       url("/public/assets/header/he1.jpg");
     background-size: cover;
     background-position: center;
+
+    @media only screen and (max-width: $bp-small) {
+      height: 32rem;
+      grid-row: 1;
+    }
   }
 
   &-form {

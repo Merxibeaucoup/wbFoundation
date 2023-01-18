@@ -3,6 +3,10 @@
   margin-top: 8rem;
   padding: 8rem 0;
 
+  @media only screen and (max-width: $bp-medium) {
+    text-align: center;
+  }
+
   &__container {
     width: 100%;
 
@@ -13,6 +17,13 @@
   }
 
   &__intro {
+    text-align: center;
+    @media only screen and (max-width: $bp-medium) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
     &__img {
       width: 18rem;
 
@@ -29,6 +40,10 @@
       color: silver;
       font-weight: 400;
       line-height: 2.5rem;
+
+      @media only screen and (max-width: $bp-small) {
+        padding-bottom: 2rem;
+      }
     }
   }
   &__heading {
@@ -82,7 +97,10 @@
     &__heading {
       font-size: 1.8rem;
       font-weight: 700;
-      margin-bottom: 4rem;
+      margin-bottom: 1rem;
+      @media only screen and (max-width: $bp-small) {
+        margin-bottom: 0.4rem;
+      }
     }
 
     address {

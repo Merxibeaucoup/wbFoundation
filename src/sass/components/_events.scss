@@ -3,6 +3,13 @@
   gap: 3rem;
   margin: 4rem 0 8rem 0;
 
+  @media only screen and (max-width: $bp-medium) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
   &__header {
     display: flex;
     align-items: center;
@@ -12,6 +19,7 @@
   }
 
   &__box {
+    padding-bottom: 1rem;
     width: 37rem;
     height: 100%;
     border-radius: 0px;
@@ -19,6 +27,9 @@
     box-shadow: 0px 0px 15px -5px;
     transition: 0.3s;
     animation: all ease-in;
+    @media only screen and (max-width: $bp-medium) {
+      width: 46rem;
+    }
 
     &:hover {
       transform: scale(1.1);
@@ -39,6 +50,10 @@
     &-contents {
       margin: 1rem;
       margin-top: 1rem;
+
+      @media only screen and (max-width: $bp-medium) {
+        padding: 0 1.6rem;
+      }
     }
 
     &-title {
