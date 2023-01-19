@@ -12,22 +12,22 @@ const ContactForm = () => {
     e.preventDefault();
   };
   return (
-    <div class="container">
+    <div className="container">
       <div className="cta__layer">
-        <div class="cta">
-          <div class="cta-text-box">
-            <h2 class="heading-secondary">
+        <div className="cta">
+          <div className="cta-text-box">
+            <h2 className="heading-secondary">
               Leave Your Message In The Contact Form!
             </h2>
-            <p class="cta-text">
+            <p className="cta-text">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores
               hic amet repellat molestias unde quod animi, harum commodi iusto
               adipisci?
             </p>
 
-            <form class="cta-form" name="contact-us" netlify>
+            <form className="cta-form" name="contact-us">
               <div>
-                <label for="full-name">Full Name</label>
+                <label htmlFor="full-name">Full Name</label>
                 <input
                   id="full-name"
                   type="text"
@@ -38,7 +38,7 @@ const ContactForm = () => {
               </div>
 
               <div>
-                <label for="email">Email address</label>
+                <label htmlFor="email">Email address</label>
                 <input
                   id="email"
                   type="email"
@@ -49,7 +49,9 @@ const ContactForm = () => {
               </div>
 
               <div>
-                <label for="select-where">Where did you hear from us?</label>
+                <label htmlFor="select-where">
+                  Where did you hear from us?
+                </label>
                 <select id="select-where" name="select-where" required>
                   <option value="">Please choose one option:</option>
                   <option value="friends">Friends and family</option>
@@ -59,10 +61,10 @@ const ContactForm = () => {
                 </select>
               </div>
 
-              <button class="btn btn--form">Contact Us</button>
+              <button className="btn btn--form">Contact Us</button>
             </form>
           </div>
-          <div class="cta-img-box" role="img" aria-label="children"></div>
+          <div className="cta-img-box" role="img" aria-label="children"></div>
         </div>
       </div>
     </div>
