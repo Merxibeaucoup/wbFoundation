@@ -65,7 +65,6 @@ function Checkout() {
               onChange={numberHandle}
               type="number"
               min="1"
-              // onkeypress="return event.charCode >= 48"
               pattern="^[0-9]"
               placeholder="Enter Number"
               value={number}
