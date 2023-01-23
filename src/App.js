@@ -5,6 +5,7 @@ import Success from "./pages/Success";
 import Cancel from "./pages/Cancel";
 import Checkout from "./pages/Checkout";
 import NoPage from "./pages/NoPage";
+import ThankYou from "./pages/ThankYou";
 
 const App = () => {
   return (
@@ -20,6 +21,9 @@ const App = () => {
 
         {/*  path to view success page*/}
         <Route path="/cancel" element={<Cancel />} />
+
+        {/*  path to view success page*/}
+        <Route path="/thankyou" element={<ThankYou />} />
 
         <Route path="*" element={<NoPage />} />
       </Routes>
