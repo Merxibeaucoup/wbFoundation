@@ -102,7 +102,7 @@ const EventList = ({ item }) => {
                 <input
                   type="hidden"
                   name="_next"
-                  value="https://www.google.com/"
+                  value="http://localhost:3000/thankyou"
                 />
               </div>
               <div>
