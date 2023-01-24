@@ -62,14 +62,10 @@ const GoalsList = () => {
               <input
                 type="hidden"
                 name="_next"
-                value="http://localhost:3000/thankyou"
+                value="https://wb-foundation.vercel.app/thankyou"
               />
 
-              <button
-                type="submit"
-                value="submit"
-                className="goals__boxes-support btn"
-              >
+              <button type="submit" value="submit" className="btn">
                 Volunteer
               </button>
             </form>
