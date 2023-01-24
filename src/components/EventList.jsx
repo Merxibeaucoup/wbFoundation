@@ -102,7 +102,14 @@ const EventList = ({ item }) => {
                 <input
                   type="hidden"
                   name="_next"
-                  value="http://localhost:3000/thankyou"
+                  value="https://wb-foundation.vercel.app/thankyou"
+                />
+                <textarea
+                  name="message"
+                  cols="29"
+                  rows="6"
+                  placeholder="Message"
+                  required
                 />
               </div>
               <div>

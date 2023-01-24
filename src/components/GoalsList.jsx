@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const GoalsList = () => {
   const [state] = useState({
@@ -29,7 +30,9 @@ const GoalsList = () => {
             }}
           >
             <h3 className="goals__boxes-title">Support Us</h3>
-            <button className="goals__boxes-support btn">Donate</button>
+            <Link to="/checkout">
+              <button className="goals__boxes-support btn">Donate</button>
+            </Link>
           </div>
           <div className="goals__boxes-box3 box">
             <h3 className="goals__boxes-title">Mission Two</h3>
