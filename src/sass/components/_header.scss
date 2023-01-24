@@ -1,6 +1,5 @@
 .header {
   width: 100%;
-
   clip-path: polygon(50% 0, 100% 0, 100% 86%, 0% 100%, 0% 60%, 0 0);
 
   &__logo {
@@ -37,7 +36,7 @@
       content: "";
       position: absolute;
       top: 0;
-      left: 50%;
+      left: 45%;
       transform: skew(15deg) translateX(-36%);
       // this affects mobile view
       width: 60%;
@@ -53,6 +52,7 @@
 
     &::before {
       transform: skew(-13deg) translateX(-36%);
+      opacity: 0.2;
     }
 
     img {
