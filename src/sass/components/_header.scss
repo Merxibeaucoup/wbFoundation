@@ -40,25 +40,21 @@
       left: 50%;
       transform: skew(15deg) translateX(-36%);
       // this affects mobile view
-      width: 75%;
+      width: 65%;
       height: 100%;
       background-image: linear-gradient(120deg, #ffd89b, #19547b);
       background-color: #333;
       opacity: 0.37;
 
-      @media only screen and (max-width: $bp-medium) {
-        left: 46%;
-        //66
-        width: 50%;
-      }
+      // @media only screen and (max-width: $bp-medium) {
+      //   left: 46%;
+      //   //66
+      //   width: 60%;
+      // }
     }
 
     &::before {
       transform: skew(-15deg) translateX(-50%);
-
-      @media only screen and (max-width: $bp-medium) {
-        transform: skew(0) translateX(-50%);
-      }
     }
 
     img {
