@@ -37,7 +37,7 @@
       position: absolute;
       top: 0;
       left: 50%;
-      transform: skew(15deg) translateX(-50%);
+      transform: skew(15deg) translateX(-36%);
       // this affects mobile view
       width: 75%;
       height: 100%;
@@ -47,7 +47,8 @@
 
       @media only screen and (max-width: $bp-medium) {
         left: 46%;
-        width: 45%;
+        //66
+        width: 50%;
       }
     }
 
