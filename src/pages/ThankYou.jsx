@@ -6,7 +6,7 @@ import Confetti from "react-confetti";
 
 const ThankYou = () => {
   const [state] = useState({
-    image: "assets/thanks/TYhand.svg",
+    image: "assets/thanks/office.svg",
     title: "Thank you for contacting us!!",
     para1: "We will respond to you as soon as we can.",
   });
