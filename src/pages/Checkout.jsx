@@ -71,7 +71,7 @@ function Checkout() {
             />
 
             <StripeCheckout
-              stripeKey={process.env.REACT_APP_STRIPE_KEY}
+              stripeKey={process.env.PUBLISHABLE_KEY}
               token={makeRequest}
               name="WB foundation"
               amount={number * 100}
