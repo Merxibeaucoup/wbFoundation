@@ -17,6 +17,7 @@
     opacity: 0.37;
 
     @media only screen and (max-width: $bp-medium) {
+      width: 50%;
       left: 38%;
     }
   }
