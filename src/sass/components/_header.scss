@@ -1,5 +1,6 @@
 .header {
   width: 100%;
+
   clip-path: polygon(50% 0, 100% 0, 100% 86%, 0% 100%, 0% 60%, 0 0);
 
   &__logo {
@@ -54,6 +55,10 @@
 
     &::before {
       transform: skew(-15deg) translateX(-50%);
+
+      @media only screen and (max-width: $bp-medium) {
+        width: 40%;
+      }
     }
 
     img {
