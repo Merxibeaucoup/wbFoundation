@@ -28,7 +28,7 @@ function Checkout() {
     };
     setNumber("");
 
-    return fetch(`http://localhost:8282/checkout`, {
+    return fetch(`https://willy-stripe.onrender.com/checkout`, {
       method: "POST",
       headers,
       body: JSON.stringify(body),
