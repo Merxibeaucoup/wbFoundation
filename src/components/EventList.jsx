@@ -34,7 +34,7 @@ const EventList = ({ item }) => {
     color: "#333",
     margin: "1rem",
     padding: "1rem",
-    borderRadius: "9999rem",
+    borderRadius: "4px",
     border: "solid 1px grey",
   };
 
@@ -47,6 +47,12 @@ const EventList = ({ item }) => {
     borderRadius: "9999rem",
     border: "none",
     cursor: "pointer",
+  };
+
+  const textStyle = {
+    fontSize: "2rem",
+    color: "#333",
+    borderRadius: "4px",
   };
 
   useEffect(() => {
@@ -104,13 +110,16 @@ const EventList = ({ item }) => {
                   name="_next"
                   value="https://wb-foundation.vercel.app/thankyou"
                 />
-                <textarea
-                  name="message"
-                  cols="29"
-                  rows="6"
-                  placeholder="Message"
-                  required
-                />
+                <div className="div">
+                  <textarea
+                    name="message"
+                    cols="40"
+                    rows="6"
+                    placeholder="Your message here ..."
+                    style={textStyle}
+                    required
+                  />
+                </div>
               </div>
               <div>
                 <button type="submit" style={buttonStyle}>
