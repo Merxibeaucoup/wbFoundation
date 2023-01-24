@@ -46,11 +46,9 @@
       background-color: #333;
       opacity: 0.37;
 
-      // @media only screen and (max-width: $bp-medium) {
-      //   left: 46%;
-      //   //66
-      //   width: 60%;
-      // }
+      @media only screen and (max-width: $bp-medium) {
+        left: 38%;
+      }
     }
 
     &::before {
