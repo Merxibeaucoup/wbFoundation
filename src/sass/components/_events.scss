@@ -24,7 +24,7 @@
 
   &__box {
     padding-bottom: 1rem;
-    width: 37rem;
+    width: 34rem;
     height: 100%;
     border-radius: 0px;
     overflow: hidden;
@@ -32,15 +32,11 @@
     transition: 0.3s;
     animation: all ease-in;
 
-    @media only screen and (max-width: $bp-medium) {
-      width: 40rem;
-    }
-
     @media only screen and (max-width: $bp-large) {
       width: 32rem;
     }
     @media only screen and (max-width: $bp-medium) {
-      width: 46rem;
+      width: 40rem;
     }
 
     &:hover {
