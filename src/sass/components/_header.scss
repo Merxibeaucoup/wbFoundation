@@ -83,11 +83,13 @@
         font-weight: 900;
         font-size: 4.2rem;
         line-height: 3rem;
+        z-index: 999999999;
       }
       &-paragraph {
         margin-top: 1rem;
         color: yellow;
         font-size: 1.5rem;
+        z-index: 999999999;
         @media only screen and (max-width: $bp-small) {
           padding: 1rem;
           text-align: center;
@@ -99,8 +101,8 @@
     display: flex;
     justify-content: flex-end;
     position: absolute;
-    bottom: 20%;
-    right: 15%;
+    bottom: 24%;
+    right: 20%;
     width: 100%;
     height: 80%;
 
