@@ -32,10 +32,6 @@
     @include position(absolute, 2.4%, 6%, null, null, null, null);
     z-index: 999999;
 
-    @media only screen and (max-width: $bp-medium) {
-      @include position(absolute, 4rem, 20rem, null, null, null, null);
-    }
-
     img {
       width: 7.6rem;
       height: auto;
