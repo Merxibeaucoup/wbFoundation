@@ -28,7 +28,7 @@
   }
 
   &__logo {
-    @include position(absolute, -1rem, 3rem, null, null, null, null);
+    @include position(absolute, 4rem, 20rem, null, null, null, null);
     z-index: 999999;
     img {
       width: 7.6rem;
