@@ -6,6 +6,7 @@
   &__items {
     display: flex;
     flex-direction: row-reverse;
+    justify-content: space-between;
     &-donate {
       position: sticky;
       color: #073b4c;
