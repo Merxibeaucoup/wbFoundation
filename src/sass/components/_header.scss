@@ -28,13 +28,16 @@
   }
 
   &__logo {
-    @include position(absolute, -1rem, 3rem, null, null, null, null);
+    @include position(absolute, 1.5rem, 7rem, null, null, null, null);
     z-index: 999999;
+
     img {
-      width: 18rem;
+      width: 7.5rem;
       height: auto;
       object-fit: cover;
       cursor: pointer;
+      border-radius: 99999rem;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
   }
   &__title {

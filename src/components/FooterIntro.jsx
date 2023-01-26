@@ -5,7 +5,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const FooterIntro = () => {
   const [state] = useState({
-    logo: "/assets/footer/wb-4.png",
+    logo: "/assets/logo/q1.jpeg",
     intro:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi illum molestiae quaerat, fugiat ullam eligendi reprehenderit impedit beatae eius. Non, neque. Fugiat delectus accusamus a sequi nihil necessitatibus corporis quisquam.    ",
   });

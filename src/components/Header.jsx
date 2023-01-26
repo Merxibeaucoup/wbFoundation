@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const Header = () => {
   const [state] = useState({
     image: "assets/header/he1.jpg",
-    logo: "assets/logo/wb-5.png",
+    logo: "assets/logo/q1.jpeg",
     title: "Givers Never lack",
     para: "ahsiaaslknlqw wkdnkjew eknfewj qkneqwj kewqnfjewq qwknwqdqwenfljweq sncwq jn dfn ",
     swirly: "assets/header/sw1.svg",
