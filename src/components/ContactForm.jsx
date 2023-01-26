@@ -1,38 +1,42 @@
 import React from "react";
-import { useState } from "react";
+// import { useState } from "react";
 
 const ContactForm = () => {
-  const [state, setState] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+  // const [state, setState] = useState({
+  //   name: "",
+  //   email: "",
+  // });
 
-  const submitContact = (e) => {
-    e.preventDefault();
-  };
+  // const submitContact = (e) => {
+  //   e.preventDefault();
+  // };
   return (
     <div className="container">
       <div className="cta__layer">
         <div className="cta">
           <div className="cta-text-box">
             <h2 className="heading-secondary">
-              Leave Your Message In The Contact Form!
+              Leave Your Info In The Contact Form!
             </h2>
             <p className="cta-text">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores
-              hic amet repellat molestias unde quod animi, harum commodi iusto
-              adipisci?
+              We would love to get to know you and stay in touch, <br />
+              Fill out the contact form below and we will get back to you ASAP.
             </p>
 
-            <form className="cta-form" name="contact-us">
+            <form
+              className="cta-form"
+              name="contact-us"
+              target="_blank"
+              action="https://formsubmit.co/9e4bbbfb6393d0fbbcf1ac400b1a3ece"
+              method="POST"
+            >
               <div>
                 <label htmlFor="full-name">Full Name</label>
                 <input
                   id="full-name"
+                  name="full name"
                   type="text"
                   placeholder="John Smith"
-                  name="full-name"
                   required
                 />
               </div>
@@ -42,8 +46,8 @@ const ContactForm = () => {
                 <input
                   id="email"
                   type="email"
-                  placeholder="me@example.com"
                   name="email"
+                  placeholder="me@example.com"
                   required
                 />
               </div>
@@ -60,8 +64,18 @@ const ContactForm = () => {
                   <option value="others">Others</option>
                 </select>
               </div>
+              <input
+                type="hidden"
+                name="_subject"
+                value="someone wants to Get in touch with US !"
+              />
+              <input
+                type="hidden"
+                name="_next"
+                value="https://wb-foundation.vercel.app/thankyou"
+              />
 
-              <button className="btn btn--form">Contact Us</button>
+              <button className="btn btn--form">Get in touch with us</button>
             </form>
           </div>
           <div className="cta-img-box" role="img" aria-label="children"></div>

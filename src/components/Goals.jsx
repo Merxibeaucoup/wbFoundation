@@ -5,8 +5,6 @@ import "aos/dist/aos.css";
 const Goals = () => {
   const [state] = useState({
     heading: "We're on a MISSION to change other people's lives. Here is how: ",
-    paragraph:
-      "voluptas alias voluptatum accusamus similique neque. Ab, necessitatibus?consectetur adipisicing elit. Vel est eligendi at sit autem, necessitatibus debitis eos repudiandae nostrum quia soluta harum voluptas alias voluptatum accusamus similique neque. Ab, necessitatibus?",
   });
 
   useEffect(() => {

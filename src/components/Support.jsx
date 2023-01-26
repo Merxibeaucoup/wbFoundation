@@ -8,11 +8,15 @@ const Support = ({ item }) => {
           Your Support Helps Our <br /> Community
         </h3>
         <p className="support__desc">
-          By Supporting WBfoudation, you are supporting unfortanate individuals
-          in Ghana, west Africa. <br />
-          What started as an annual food drive 4 years ago has <br /> blossomed
-          into a community centered organization focused on providing <br />{" "}
-          quality life for unfortunate individuals.
+          WB's Helping Hands Foundation, with continuous commitment established
+          in 2018. The founder was supporting several students financially to
+          further their education due to hardship their families were facing.
+          Some students in elementary school popularly known as "primary" in
+          Ghana, high school and College. He found the passion for expanding
+          this organizational outreach and not limiting himself to prodigy
+          financial support.Outside of making sure kids were furthering their
+          education, he also made sure he was providing provisions, money and
+          hygiene products for several orphanages yearly.
         </p>
       </div>
     </div>

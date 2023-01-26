@@ -7,7 +7,7 @@ const FooterIntro = () => {
   const [state] = useState({
     logo: "/assets/logo/q1.jpeg",
     intro:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi illum molestiae quaerat, fugiat ullam eligendi reprehenderit impedit beatae eius. Non, neque. Fugiat delectus accusamus a sequi nihil necessitatibus corporis quisquam.    ",
+      "By browsing this website, you acknowledge and agree that your access to information on these pages constitutes acceptance. If you do not agree to the use, terms and or anything on this website, please do not use , donate and or put your information on this website.",
   });
   return (
     <div className="footer__intro">

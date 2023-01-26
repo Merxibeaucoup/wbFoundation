@@ -9,7 +9,7 @@ const Header = () => {
     image: "assets/header/he1.jpg",
     logo: "assets/logo/q1.jpeg",
     title: "Givers Never lack",
-    para: "ahsiaaslknlqw wkdnkjew eknfewj qkneqwj kewqnfjewq qwknwqdqwenfljweq sncwq jn dfn ",
+    para: " Alone we can do so little; together we can do so much - Hellen Keller",
     swirly: "assets/header/sw1.svg",
   });
 

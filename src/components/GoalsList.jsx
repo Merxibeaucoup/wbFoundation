@@ -10,14 +10,11 @@ const GoalsList = () => {
       <div className="container">
         <div className="goals__boxes">
           <div className="goals__boxes-box1 box">
-            <h3 className="goals__boxes-title">Mission One</h3>
+            <h3 className="goals__boxes-title">Our Mission</h3>
             <p className="goals__boxes-paragraph">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit
-              maiores facere iusto tenetur laborum. Vitae consequatur id
-              corrupti deleniti. Iste in ea itaque quos id voluptas ullam non,
-              sapiente quibusdam quod veritatis consectetur corporis alias
-              incidunt ab! Neque inventore dolorem temporibus quaerat a minima,
-              voluptas deleniti? Ullam culpa dolorum adipisci.
+              As a response to difficulties faced by families in providing
+              necessities, WB's Helping Hands is bridging the gap to aid
+              families and children in deprived regions. (Ghana).
             </p>
           </div>
           <div
@@ -35,12 +32,11 @@ const GoalsList = () => {
             </Link>
           </div>
           <div className="goals__boxes-box3 box">
-            <h3 className="goals__boxes-title">Mission Two</h3>
+            <h3 className="goals__boxes-title">Goals</h3>
             <p className="goals__boxes-paragraph">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit
-              maiores facere iusto tenetur laborum. Vitae consequatur id
-              corrupti deleniti. Iste in ea itaque quos id voluptas ullam non,
-              sapiente quibusdam quod veritatis consectetur corporis alias
+              Provide educational opportunities and medical assistance to the
+              less privileged, assist with vocational skills and support
+              orphanages with life-sustaining necessities.
             </p>
           </div>
           <div className="goals__boxes-box4 box">
