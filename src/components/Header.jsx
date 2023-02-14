@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 const Header = () => {
   const [state] = useState({
     image: "assets/header/he1.jpg",
+    video: "assets/videos/header.mp4",
     logo: "assets/logo/q1.jpeg",
     title: "Givers Never lack",
     para: " Alone we can do so little; together we can do so much - Hellen Keller",
@@ -26,8 +27,15 @@ const Header = () => {
           </div>
         </Link>
 
-        <div className="header__img">
-          <LazyLoadImage src={state.image} alt="image" />
+        <div className="header__video">
+          {/* <LazyLoadImage src={state.image} alt="image" /> */}
+          <video
+            src={state.video}
+            autoPlay
+            loop
+            muted
+            poster={state.poster}
+          ></video>
         </div>
         <div className="header__words">
           <div className="container">
