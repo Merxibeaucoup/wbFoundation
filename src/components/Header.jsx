@@ -34,7 +34,9 @@ const Header = () => {
             autoPlay
             loop
             muted
-            poster={state.poster}
+            playsInline
+            id="videoplayer"
+            // poster={state.poster}
           ></video>
         </div>
         <div className="header__words">
