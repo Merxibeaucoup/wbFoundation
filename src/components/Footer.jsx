@@ -69,7 +69,10 @@ const Footer = () => {
             </div>
           </div>
           <div className="footer__bottom">
-            <p>&copy; copyright wb foundation {new Date().getFullYear()}</p>
+            <p>
+              &copy; copyright WB's helping hand foundation{"  "}
+              {new Date().getFullYear()}
+            </p>
           </div>
         </div>
       </div>
