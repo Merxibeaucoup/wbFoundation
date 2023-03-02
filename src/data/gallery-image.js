@@ -38,13 +38,9 @@ export const images = [
   {
     original: "/assets/gallery/w7.png",
     thumbnail: "/assets/gallery/w7.png",
-    originalHeight: "800px",
-    originalWidth: "600px",
   },
   {
     original: "/assets/gallery/w8.png",
     thumbnail: "/assets/gallery/w8.png",
-    originalHeight: "800px",
-    originalWidth: "600px",
   },
 ];
