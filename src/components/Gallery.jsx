@@ -31,11 +31,13 @@ const Gallery = () => {
         >
           Gallery
         </h2>
-        <div
-          className="gallery__image__wrapper
-        "
-        >
-          <ImageGallery items={images} showBullets={true} lazyLoad={true} />
+        <div className="gallery__image__wrapper">
+          <ImageGallery
+            className="gallery__image__wrapper__img"
+            items={images}
+            showBullets={true}
+            lazyLoad={true}
+          />
         </div>
       </div>
     </div>
