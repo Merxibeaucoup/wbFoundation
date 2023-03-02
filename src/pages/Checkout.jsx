@@ -7,7 +7,7 @@ import Footer from "../components/Footer";
 
 function Checkout() {
   const [state] = useState({
-    logo: "assets/logo/wb-5.png",
+    logo: "assets/logo/q1.jpeg",
     image: "assets/donate/heart1.png",
     support:
       "Please Show your support with a donation of your choice. This will only take a minute.",

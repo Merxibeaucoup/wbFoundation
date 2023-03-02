@@ -22,6 +22,10 @@
       width: 50%;
       left: 38%;
     }
+    @media only screen and (max-width: $bp-small) {
+      width: 45%;
+      left: 45%;
+    }
   }
 
   &::before {

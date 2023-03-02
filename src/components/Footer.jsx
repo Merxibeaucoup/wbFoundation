@@ -29,16 +29,16 @@ const Footer = () => {
                     <p>
                       <a
                         class="footer__contact__address-link"
-                        href="tel:415-201-6370"
+                        href="tel: 401-000-0000"
                       >
-                        415-201-6370
+                        401-000-0000
                       </a>
                       <br />
                       <a
                         class="footer__contact__address-link"
-                        href="mailto:hello@omnifood.com"
+                        href="mailto:wbhelpinghands@gmail.com"
                       >
-                        wbFoundation@yahoo.com
+                        wbhelpinghands@gmail.com
                       </a>
                     </p>
                   </address>
