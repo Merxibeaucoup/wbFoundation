@@ -1,6 +1,8 @@
 import React from "react";
 import ImageGallery from "react-image-gallery";
 import { images } from "../data/gallery-image";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 // const images = [
 //   {
@@ -21,8 +23,21 @@ const Gallery = () => {
   return (
     <div className="gallery">
       <div className="container">
-        <h2 className="gallery__header">Gallery</h2>
-        <div className="gallery__image__wrapper">
+        <h2
+          className="gallery__header"
+          data-aos="fade-left"
+          data-aos-offset="200"
+          data-aos-easing="ease-in-sine"
+        >
+          Gallery
+        </h2>
+        <div
+          className="gallery__image__wrapper
+        "
+          data-aos="fade-right"
+          data-aos-offset="200"
+          data-aos-easing="ease-in-sine"
+        >
           <ImageGallery
             className="gallery__image__wrapper__img"
             items={images}
