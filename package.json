@@ -53,5 +53,6 @@
   },
   "devDependencies": {
     "@types/aos": "^3.0.4"
-  }
+  },
+  "proxy": "https://willy-stripe.onrender.com/checkout"
 }

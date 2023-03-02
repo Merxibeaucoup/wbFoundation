@@ -25,21 +25,26 @@ function Checkout() {
     };
     const headers = {
       "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*",
     };
     setNumber("");
 
-    return fetch(`https://willy-stripe.onrender.com/checkout`, {
-      method: "POST",
-
-      headers,
-      body: JSON.stringify(body),
-    })
-      .then((response) => {
-        console.log("RESPONSE ", response);
-        const { status } = response;
-        console.log("STATUS ", status);
+    return (
+      fetch(`https://willy-stripe.onrender.com/checkout`, {
+        method: "POST",
+        headers,
+        body: JSON.stringify(body),
       })
-      .catch((error) => console.log(error));
+        // const body2 =  res.json()
+        // window.location.href = body2.url
+
+        .then((response) => {
+          console.log("RESPONSE ", response);
+          const { status } = response;
+          console.log("STATUS ", status);
+        })
+        .catch((error) => console.log(error))
+    );
   };
   return (
     <>
