@@ -26,7 +26,7 @@ const Gallery = () => {
           <ImageGallery
             items={images}
             showBullets={true}
-            showFullscreenButton={false}
+            showFullscreenButton={true}
             lazyLoad={true}
           />
         </div>

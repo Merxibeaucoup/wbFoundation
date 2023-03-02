@@ -9,14 +9,14 @@
 
   &__image {
     &__wrapper {
+      width: 100%;
       max-width: 850px;
       width: 100%;
       margin: 0 auto;
       box-shadow: #2b15453d 1px 10px 10px 5px;
 
       @media only screen and (max-width: $bp-medium) {
-        max-width: 85vw;
-        height: 90vh;
+        max-width: 100vw;
       }
     }
   }
