@@ -18,15 +18,19 @@
     background-color: #333;
     opacity: 0.37;
 
-    @media only screen and (max-width: $bp-medium) {
-      width: 50%;
-      left: 38%;
+    @media only screen and (max-width: $bp-small) {
+      width: 40%;
+      left: 42%;
     }
   }
 
   &::before {
     transform: skew(-13deg) translateX(-36%);
     opacity: 0.2;
+    @media only screen and (max-width: $bp-small) {
+      width: 40%;
+      left: 38.5%;
+    }
   }
 
   &__logo {
