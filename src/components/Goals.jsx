@@ -4,7 +4,8 @@ import "aos/dist/aos.css";
 
 const Goals = () => {
   const [state] = useState({
-    heading: "We're on a MISSION to change other people's lives. Here is how: ",
+    heading:
+      "We're on a MISSION to change other people's lives. Here is how : ",
   });
 
   useEffect(() => {
@@ -14,16 +15,14 @@ const Goals = () => {
     <div className="goals ">
       <div className="container">
         <div className="row  mr-minus-15">
-          <div className="col-12">
-            <h3
-              className="goals__heading"
-              data-aos="fade-left"
-              data-aos-offset="200"
-              data-aos-easing="ease-in-sine"
-            >
-              {state.heading}
-            </h3>
-          </div>
+          <h3
+            className="goals__heading"
+            data-aos="fade-left"
+            data-aos-offset="200"
+            data-aos-easing="ease-in-sine"
+          >
+            {state.heading}
+          </h3>
         </div>
       </div>
     </div>

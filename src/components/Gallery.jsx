@@ -25,7 +25,7 @@ const Gallery = () => {
       <div className="container">
         <h2
           className="gallery__header"
-          data-aos="fade-left"
+          data-aos="zoom-in"
           data-aos-offset="200"
           data-aos-easing="ease-in-sine"
         >
@@ -34,17 +34,8 @@ const Gallery = () => {
         <div
           className="gallery__image__wrapper
         "
-          data-aos="fade-right"
-          data-aos-offset="200"
-          data-aos-easing="ease-in-sine"
         >
-          <ImageGallery
-            className="gallery__image__wrapper__img"
-            items={images}
-            showBullets={true}
-            showFullscreenButton={true}
-            lazyLoad={true}
-          />
+          <ImageGallery items={images} showBullets={true} lazyLoad={true} />
         </div>
       </div>
     </div>
