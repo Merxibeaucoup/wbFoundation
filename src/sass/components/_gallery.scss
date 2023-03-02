@@ -1,5 +1,8 @@
 .gallery {
-  margin: 5rem;
+  margin: 5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &__header {
     margin: 2rem 0;
@@ -9,14 +12,17 @@
 
   &__image {
     &__wrapper {
-      width: 100%;
-      max-width: 850px;
+      max-width: 85rem;
       width: 100%;
       margin: 0 auto;
-      box-shadow: #2b15453d 1px 10px 10px 5px;
+      box-shadow: #0101013d 1px 10px 10px 5px;
+
+      &__img {
+        width: 100%;
+      }
 
       @media only screen and (max-width: $bp-medium) {
-        max-width: 100vw;
+        max-width: 90vw;
       }
     }
   }

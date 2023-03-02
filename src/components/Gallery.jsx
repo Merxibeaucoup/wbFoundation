@@ -24,6 +24,7 @@ const Gallery = () => {
         <h2 className="gallery__header">Gallery</h2>
         <div className="gallery__image__wrapper">
           <ImageGallery
+            className="gallery__image__wrapper__img"
             items={images}
             showBullets={true}
             showFullscreenButton={true}
