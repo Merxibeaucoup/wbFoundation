@@ -3,7 +3,6 @@
   height: 100vh;
   clip-path: polygon(50% 0, 100% 0, 100% 86%, 0% 100%, 0% 60%, 0 0);
   position: relative;
-  overflow: hidden;
 
   &::before,
   &::after {
@@ -14,23 +13,14 @@
     transform: skew(15deg) translateX(-36%);
     // this affects mobile view
     width: 40%;
-    height: 100%;
+    height: 90%;
     background-image: linear-gradient(120deg, #ffd89b, #19547b);
     background-color: #333;
     opacity: 0.37;
-    overflow: hidden;
 
     @media only screen and (max-width: $bp-medium) {
       width: 50%;
       left: 38%;
-      height: fit-content;
-      overflow: hidden;
-    }
-    @media only screen and (max-width: $bp-small) {
-      width: 45%;
-      left: 45%;
-      height: fit-content;
-      overflow: hidden;
     }
   }
 
@@ -79,7 +69,7 @@
   }
 
   &__video {
-    height: 100vh;
+    height: 90vh;
     width: 100%;
     overflow: hidden;
     video {
