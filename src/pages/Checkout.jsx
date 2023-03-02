@@ -30,7 +30,7 @@ function Checkout() {
 
     return fetch(`https://willy-stripe.onrender.com/checkout`, {
       method: "POST",
-      mode: "no-cors",
+
       headers,
       body: JSON.stringify(body),
     })
