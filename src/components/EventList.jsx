@@ -108,7 +108,7 @@ const EventList = ({ item }) => {
                 <input
                   type="hidden"
                   name="_next"
-                  value="https://wb-foundation.vercel.app/thankyou"
+                  value="https://www.wbhelpinghands.com/thankyou"
                 />
                 <div className="div">
                   <textarea

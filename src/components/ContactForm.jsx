@@ -72,7 +72,7 @@ const ContactForm = () => {
               <input
                 type="hidden"
                 name="_next"
-                value="https://wb-foundation.vercel.app/thankyou"
+                value="https://www.wbhelpinghands.com/thankyou"
               />
 
               <button className="btn btn--form">Get in touch with us</button>
