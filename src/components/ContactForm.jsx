@@ -27,7 +27,7 @@ const ContactForm = () => {
               className="cta-form"
               name="contact-us"
               target="_blank"
-              action="https://formsubmit.co/whelpinghands22@gmail.com"
+              action="https://formsubmit.co/wbhelpinghands22@gmail.com"
               method="POST"
             >
               <div>
