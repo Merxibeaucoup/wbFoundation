@@ -38,7 +38,7 @@ const Footer = () => {
                         class="footer__contact__address-link"
                         href="mailto:wbhelpinghands@gmail.com"
                       >
-                        wbhelpinghands@gmail.com
+                        whelpinghands22@gmail.com
                       </a>
                     </p>
                   </address>

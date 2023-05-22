@@ -81,7 +81,7 @@ const EventList = ({ item }) => {
           <Modal open={open} onClose={onCloseModal} center styles={bg}>
             <form
               target="_blank"
-              action="https://formsubmit.co/9e4bbbfb6393d0fbbcf1ac400b1a3ece"
+              action="https://formsubmit.co/whelpinghands22@gmail.com"
               method="POST"
               style={formStyles}
             >

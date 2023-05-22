@@ -43,7 +43,7 @@ const GoalsList = () => {
             <h3 className="goals__boxes-title">Volunteer</h3>
             <form
               target="_blank"
-              action="https://formsubmit.co/9e4bbbfb6393d0fbbcf1ac400b1a3ece"
+              action="https://formsubmit.co/whelpinghands22@gmail.com"
               method="POST"
               class="goals__boxes__volunteer-form"
             >
