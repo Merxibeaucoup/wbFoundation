@@ -43,7 +43,7 @@ const GoalsList = () => {
             <h3 className="goals__boxes-title">Volunteer</h3>
             <form
               target="_blank"
-              action="https://formsubmit.co/wbhelpinghands22@gmail.com"
+              action="https://formsubmit.co/ce465a1c6128ed20d7c8b3d47f44dcc7"
               method="POST"
               class="goals__boxes__volunteer-form"
             >
@@ -61,7 +61,7 @@ const GoalsList = () => {
               <input
                 type="hidden"
                 name="_next"
-                value="https://wb-foundation.vercel.app/thankyou"
+                value="https://www.wbhelpinghands.com/thankyou"
               />
 
               <button type="submit" value="submit" className="btn">
