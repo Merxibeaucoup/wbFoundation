@@ -29,9 +29,9 @@ const Footer = () => {
                     <p>
                       <a
                         class="footer__contact__address-link"
-                        href="tel: 401-000-0000"
+                        href="tel: 401-249-4399"
                       >
-                        401-000-0000
+                        401-249-4399
                       </a>
                       <br />
                       <a
