@@ -149,7 +149,7 @@ export default function Home() {
             playsInline
             className="h-full w-full object-cover"
           >
-            <source src="/public/videos/header.mp4" type="video/mp4" />
+            <source src="/videos/header.mp4" type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-black/50" />
         </div>
