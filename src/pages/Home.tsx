@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Calendar, Heart, Mail, MapPin, Phone } from "lucide-react";
 import { GalleryCarousel } from "../components/GalleryCarousel";
 import { DynamicHeroBackground } from "../components/DynamicHeroBackground";
+import AlbumViewer from "../components/AlbumViewer";
 
 export default function Home() {
   const [isCarouselOpen, setIsCarouselOpen] = useState(false);
@@ -15,6 +16,58 @@ export default function Home() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState("");
+  const [selectedAlbum, setSelectedAlbum] = useState<{
+    title: string;
+    images: string[];
+  } | null>(null);
+  const albums = [
+    {
+      title: "Sports & Games",
+      description: "Community sports event bringing youth together",
+      coverImage: "/gallery/GCS_4171.jpg",
+      images: ["/gallery/GCS_4171.jpg", "/gallery/GCS_3911.jpg"],
+    },
+    {
+      title: "Celebrations & Give Back",
+      description: "Annual celebratrions festival and give back",
+      coverImage: "/w13.jpeg",
+      images: [
+        "/w10.jpeg",
+        "/w4.jpg",
+        "/w5.jpg",
+        "/w3.jpg",
+        "/gallery/GCS_4263.jpg",
+      ],
+    },
+    {
+      title: "Volunteer's & Staff",
+      description: "Our dedicated team making a difference every day",
+      coverImage: "/gallery/GCS_4423.jpg",
+      images: ["/w9.jpeg", "/gallery/GCS_4359.jpg", "/gallery/GCS_4312.jpg"],
+    },
+    {
+      title: "Education Programs",
+      description: "Empowering children through quality education",
+      coverImage: "/school-supplies-distribution-ghana.jpg",
+      images: ["/school-supplies-distribution-ghana.jpg"],
+    },
+    {
+      title: "Healthcare Outreach",
+      description: "Bringing medical care to remote communities",
+      coverImage: "/healthcare-clinic-ghana-africa.jpg",
+      images: [],
+    },
+    {
+      title: "Community Development",
+      description: "Building sustainable infrastructure for the future",
+      coverImage: "/solar-panel-installation-ghana-village.jpg",
+      images: [],
+    },
+  ];
+
+  const openAlbum = (album: { title: string; images: string[] }) => {
+    setSelectedAlbum(album);
+  };
 
   const handleContactSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -225,160 +278,249 @@ export default function Home() {
       </section>
 
       {/* Gallery Section */}
-      <section id="gallery" className="py-24 bg-muted/30">
+      {/* <section id="gallery" className="py-24 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="mb-12 text-center">
             <div className="mx-auto mb-4 inline-block rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary">
-              Our Impact
+              Photo Albums
             </div>
             <h2 className="text-4xl font-bold tracking-tight md:text-5xl">
-              See the Difference We Make
+              Explore Our Albums
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Real stories from communities across Ghana
+              Browse through our collection of memorable moments
             </p>
           </div>
-          <div className="grid gap-4 md:grid-cols-3">
-            <div className="group relative overflow-hidden rounded-2xl h-64">
-              <img
-                src="/children-studying-in-classroom-ghana.jpg"
-                alt="Children in classroom"
-                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-              <div className="absolute bottom-6 left-6 text-white">
-                <h3 className="text-lg font-semibold">Education Programs</h3>
-              </div>
-            </div>
-            <div className="group relative overflow-hidden rounded-2xl h-64">
-              <img
-                src="/healthcare-clinic-ghana-africa.jpg"
-                alt="Healthcare clinic"
-                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-              <div className="absolute bottom-6 left-6 text-white">
-                <h3 className="text-lg font-semibold">Healthcare Access</h3>
-              </div>
-            </div>
-            <div className="group relative overflow-hidden rounded-2xl h-64">
-              <img
-                src="/community-gathering-ghana-village.jpg"
-                alt="Community gathering"
-                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-              <div className="absolute bottom-6 left-6 text-white">
-                <h3 className="text-lg font-semibold">Community Building</h3>
-              </div>
-            </div>
-            <div className="group relative overflow-hidden rounded-2xl md:col-span-2 h-64">
-              <img
-                src="/clean-water-well-ghana-village-celebration.jpg"
-                alt="Water well project"
-                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-              <div className="absolute bottom-6 left-6 text-white">
-                <h3 className="text-lg font-semibold">Clean Water Projects</h3>
-              </div>
-            </div>
-            <div className="group relative overflow-hidden rounded-2xl h-64">
-              <img
-                src="/agricultural-training-ghana-farmers.jpg"
-                alt="Agricultural training"
-                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-              <div className="absolute bottom-6 left-6 text-white">
-                <h3 className="text-lg font-semibold">Agricultural Support</h3>
-              </div>
-            </div>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {albums.map((album, index) => (
+              <button
+                key={index}
+                onClick={() =>
+                  openAlbum({ title: album.title, images: album.images })
+                }
+                className="group relative overflow-hidden rounded-2xl h-72 text-left transition-transform hover:scale-105"
+              >
+                <img
+                  src={album.coverImage || "/placeholder.svg"}
+                  alt={album.title}
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                <div className="absolute bottom-6 left-6 right-6 text-white">
+                  <div className="mb-2 inline-block rounded-full bg-primary/20 px-3 py-1 text-xs font-medium backdrop-blur-sm">
+                    {album.images.length} Photos
+                  </div>
+                  <h3 className="text-xl font-bold">{album.title}</h3>
+                  <p className="mt-2 text-sm text-white/90">
+                    {album.description}
+                  </p>
+                </div>
+              </button>
+            ))}
           </div>
-          <div className="mt-10 text-center">
+        </div>
+      </section>
+
+      {selectedAlbum && (
+        <AlbumViewer
+          isOpen={!!selectedAlbum}
+          onClose={() => setSelectedAlbum(null)}
+          albumTitle={selectedAlbum.title}
+          images={selectedAlbum.images}
+        />
+      )} */}
+      <section id="gallery" className="py-24 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="mb-16 text-center">
+            <div className="mx-auto mb-4 inline-block rounded-full bg-gradient-to-r from-primary/20 to-secondary/20 px-6 py-2 text-sm font-semibold text-primary backdrop-blur-sm">
+              📸 Photo Albums
+            </div>
+            <h2 className="text-5xl font-bold tracking-tight md:text-6xl">
+              Explore Our{" "}
+              <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                Memories
+              </span>
+            </h2>
+            <p className="mt-6 text-xl text-muted-foreground max-w-2xl mx-auto">
+              Browse through our collection of impactful moments
+            </p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-12 auto-rows-[280px]">
+            {/* Large featured album - takes up 2 rows and 2 columns on large screens */}
             <button
-              onClick={() => setIsCarouselOpen(true)}
-              className="rounded-full border border-input bg-background px-6 py-3 text-base font-semibold hover:bg-accent"
+              onClick={() =>
+                openAlbum({ title: albums[0].title, images: albums[0].images })
+              }
+              className="group relative overflow-hidden rounded-3xl lg:col-span-6 lg:row-span-2 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-1"
             >
-              See More Photos
+              <img
+                src={albums[0].coverImage || "/placeholder.svg"}
+                alt={albums[0].title}
+                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
+              <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-500" />
+              <div className="absolute bottom-8 left-8 right-8 text-white">
+                <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-white/20 px-4 py-2 text-sm font-semibold backdrop-blur-md border border-white/30">
+                  <span className="text-2xl">📷</span>
+                  {albums[0].images.length} Photos
+                </div>
+                <h3 className="text-3xl font-bold mb-3 group-hover:text-primary transition-colors">
+                  {albums[0].title}
+                </h3>
+                <p className="text-base text-white/95 max-w-md">
+                  {albums[0].description}
+                </p>
+              </div>
+            </button>
+
+            {/* Medium album - takes up 1 row and spans columns */}
+            <button
+              onClick={() =>
+                openAlbum({ title: albums[1].title, images: albums[1].images })
+              }
+              className="group relative overflow-hidden rounded-3xl lg:col-span-6 transition-all duration-500 hover:shadow-2xl hover:shadow-secondary/20 hover:-translate-y-1"
+            >
+              <img
+                src={albums[1].coverImage || "/placeholder.svg"}
+                alt={albums[1].title}
+                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
+              <div className="absolute inset-0 bg-secondary/0 group-hover:bg-secondary/10 transition-colors duration-500" />
+              <div className="absolute bottom-6 left-6 right-6 text-white">
+                <div className="mb-2 inline-flex items-center gap-2 rounded-full bg-white/20 px-3 py-1.5 text-xs font-semibold backdrop-blur-md border border-white/30">
+                  <span>🎉</span>
+                  {albums[1].images.length} Photos
+                </div>
+                <h3 className="text-xl font-bold mb-2 group-hover:text-secondary transition-colors">
+                  {albums[1].title}
+                </h3>
+                <p className="text-sm text-white/90 line-clamp-2">
+                  {albums[1].description}
+                </p>
+              </div>
+            </button>
+
+            {/* Compact albums in a row */}
+            <button
+              onClick={() =>
+                openAlbum({ title: albums[2].title, images: albums[2].images })
+              }
+              className="group relative overflow-hidden rounded-3xl lg:col-span-3 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-1"
+            >
+              <img
+                src={albums[2].coverImage || "/placeholder.svg"}
+                alt={albums[2].title}
+                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
+              <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-500" />
+              <div className="absolute bottom-4 left-4 right-4 text-white">
+                <div className="mb-2 inline-flex items-center gap-1.5 rounded-full bg-white/20 px-2.5 py-1 text-xs font-semibold backdrop-blur-md border border-white/30">
+                  <span>👥</span>
+                  {albums[2].images.length}
+                </div>
+                <h3 className="text-lg font-bold mb-1 group-hover:text-primary transition-colors">
+                  {albums[2].title}
+                </h3>
+                <p className="text-xs text-white/85 line-clamp-2">
+                  {albums[2].description}
+                </p>
+              </div>
+            </button>
+
+            <button
+              onClick={() =>
+                openAlbum({ title: albums[3].title, images: albums[3].images })
+              }
+              className="group relative overflow-hidden rounded-3xl lg:col-span-3 transition-all duration-500 hover:shadow-2xl hover:shadow-secondary/20 hover:-translate-y-1"
+            >
+              <img
+                src={albums[3].coverImage || "/placeholder.svg"}
+                alt={albums[3].title}
+                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
+              <div className="absolute inset-0 bg-secondary/0 group-hover:bg-secondary/10 transition-colors duration-500" />
+              <div className="absolute bottom-4 left-4 right-4 text-white">
+                <div className="mb-2 inline-flex items-center gap-1.5 rounded-full bg-white/20 px-2.5 py-1 text-xs font-semibold backdrop-blur-md border border-white/30">
+                  <span>📚</span>
+                  {albums[3].images.length}
+                </div>
+                <h3 className="text-lg font-bold mb-1 group-hover:text-secondary transition-colors">
+                  {albums[3].title}
+                </h3>
+                <p className="text-xs text-white/85 line-clamp-2">
+                  {albums[3].description}
+                </p>
+              </div>
+            </button>
+
+            {/* Tall album spanning 2 rows */}
+            <button
+              onClick={() =>
+                openAlbum({ title: albums[4].title, images: albums[4].images })
+              }
+              className="group relative overflow-hidden rounded-3xl lg:col-span-4 lg:row-span-1 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-1"
+            >
+              <img
+                src={albums[4].coverImage || "/placeholder.svg"}
+                alt={albums[4].title}
+                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
+              <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-500" />
+              <div className="absolute bottom-6 left-6 right-6 text-white">
+                <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-white/20 px-4 py-2 text-sm font-semibold backdrop-blur-md border border-white/30">
+                  <span>🏥</span>
+                  {albums[4].images.length} Photos
+                </div>
+                <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">
+                  {albums[4].title}
+                </h3>
+                <p className="text-sm text-white/95">{albums[4].description}</p>
+              </div>
+            </button>
+
+            {/* Wide album */}
+            <button
+              onClick={() =>
+                openAlbum({ title: albums[5].title, images: albums[5].images })
+              }
+              className="group relative overflow-hidden rounded-3xl lg:col-span-8 transition-all duration-500 hover:shadow-2xl hover:shadow-secondary/20 hover:-translate-y-1"
+            >
+              <img
+                src={albums[5].coverImage || "/placeholder.svg"}
+                alt={albums[5].title}
+                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
+              <div className="absolute inset-0 bg-secondary/0 group-hover:bg-secondary/10 transition-colors duration-500" />
+              <div className="absolute bottom-6 left-6 right-6 text-white">
+                <div className="mb-2 inline-flex items-center gap-2 rounded-full bg-white/20 px-3 py-1.5 text-xs font-semibold backdrop-blur-md border border-white/30">
+                  <span>🌍</span>
+                  {albums[5].images.length} Photos
+                </div>
+                <h3 className="text-xl font-bold mb-2 group-hover:text-secondary transition-colors">
+                  {albums[5].title}
+                </h3>
+                <p className="text-sm text-white/90">{albums[5].description}</p>
+              </div>
             </button>
           </div>
         </div>
       </section>
 
-      <GalleryCarousel
-        isOpen={isCarouselOpen}
-        onClose={() => setIsCarouselOpen(false)}
-      />
-
-      {/* Events Section */}
-      <section id="events" className="py-24">
-        <div className="container mx-auto px-4">
-          <div className="mb-12 text-center">
-            <div className="mx-auto mb-4 inline-block rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary">
-              Join Us
-            </div>
-            <h2 className="text-4xl font-bold tracking-tight md:text-5xl">
-              Upcoming Events
-            </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
-              Be part of our community events and fundraisers
-            </p>
-          </div>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            <div className="overflow-hidden rounded-2xl border bg-card p-6 shadow-lg transition-shadow hover:shadow-xl">
-              <div className="mb-4 flex items-center gap-2 text-sm font-medium text-primary">
-                <Calendar className="h-4 w-4" />
-                <span>December, 2025</span>
-              </div>
-              <h3 className="mb-3 text-xl font-bold">
-                Provisions & Meal Packaging
-              </h3>
-              <p className="mb-4 leading-relaxed text-muted-foreground">
-                Join us for an evening of celebration and giving back. All
-                proceeds support our programs.
-              </p>
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <MapPin className="h-4 w-4" />
-                <span>Accra, Ghana</span>
-              </div>
-            </div>
-            <div className="overflow-hidden rounded-2xl border bg-card p-6 shadow-lg transition-shadow hover:shadow-xl">
-              <div className="mb-4 flex items-center gap-2 text-sm font-medium text-primary">
-                <Calendar className="h-4 w-4" />
-                <span>December, 2025</span>
-              </div>
-              <h3 className="mb-3 text-xl font-bold">
-                Community sports and games
-              </h3>
-              <p className="mb-4 leading-relaxed text-muted-foreground">
-                Building solid relationships go a long way. One way of doing
-                that is by doing activities we enjoy together.
-              </p>
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <MapPin className="h-4 w-4" />
-                <span>Accra, Ghana</span>
-              </div>
-            </div>
-            <div className="overflow-hidden rounded-2xl border bg-card p-6 shadow-lg transition-shadow hover:shadow-xl">
-              <div className="mb-4 flex items-center gap-2 text-sm font-medium text-primary">
-                <Calendar className="h-4 w-4" />
-                <span>January, 2026</span>
-              </div>
-              <h3 className="mb-3 text-xl font-bold">
-                Volunteer Appreciation Day
-              </h3>
-              <p className="mb-4 leading-relaxed text-muted-foreground">
-                Celebrating our amazing volunteers who make our work possible.
-              </p>
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <MapPin className="h-4 w-4" />
-                <span>Accra, Ghana</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {selectedAlbum && (
+        <AlbumViewer
+          isOpen={!!selectedAlbum}
+          onClose={() => setSelectedAlbum(null)}
+          albumTitle={selectedAlbum.title}
+          images={selectedAlbum.images}
+        />
+      )}
 
       {/* Donation CTA */}
       <section
